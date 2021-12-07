@@ -255,16 +255,17 @@ func (ams *AMSClient) ackMessage(subName string, ackId string) error {
 
 }
 
-func (ams *AMSClient) Push(subName string) error {
+func (ams *AMSClient) Push(subName string, remoteEndpoint string) error {
 
 	var err error
 
 	// load thr subscription from ams
 	sub, err := ams.loadSubscription(subName)
-
 	if err != nil {
 		return err
 	}
+
+	sub.PushCfg.Pend = remoteEndpoint
 
 	// pull messages
 	recM, err := ams.pullMsg(subName)

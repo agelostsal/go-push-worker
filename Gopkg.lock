@@ -76,7 +76,7 @@
     ".",
     "hooks/syslog"
   ]
-   revision = "ad15b42461921f1fb3529b058c6786c6a45d5162"
+  revision = "ad15b42461921f1fb3529b058c6786c6a45d5162"
   version = "v1.1.1"
 
 [[projects]]
@@ -107,6 +107,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "74f2338266df44d75196b42d69fdb0965a18626dca7de9110eb24b867805211e"
+  inputs-digest = "e75b3a9311c2abc8315251086afe5c0c0a8c0f7ef03418d3df5fface6613d8c5"
   solver-name = "gps-cdcl"
   solver-version = 1

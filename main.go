@@ -25,6 +25,8 @@ func main() {
 	var host = flag.String("host", "", "AMS host")
 	var token = flag.String("token", "", "AMS token")
 	var pollRate = flag.Int64("poll", 0, "Poll rate")
+	var remoteEndpoint = flag.String("endpoint", "", "Remote endpoint url")
+
 
 	flag.Parse()
 
@@ -37,7 +39,7 @@ func main() {
 	ams := AMSClient{Endpoint: *host, Project: *project, Token: *token, Client: client}
 
 	for {
-		err := ams.Push(*sub)
+		err := ams.Push(*sub, *remoteEndpoint)
 
 		if err != nil {
 			log.Error(err)
